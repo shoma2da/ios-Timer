@@ -7,3 +7,7 @@ script:
   - xcrun simctl list
   - xcodebuild -workspace fasttimer.xcworkspace -scheme fasttimer -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.1' -destination 'platform=iOS Simulator,name=iPad Air,OS=8.1' test install DSTROOT=${OUTPUT_DIR}
   - find . -name *app
+
+notifications:
+  slack:
+    secure: e1RobEcrPW2Or1B7xoiEf4k9qh2qXxS1mBWlfqraNVzbF/NjW1zM69gQbuRuARCo6CdRY0eHf9pDA1fU0omFWmvRPtY7r1TljaEwj9W0XYuUmpI0pqj6M72tmJPXEQXRUPW24HzZOwdFI4E1X1XBj6esYHymNi+WHyuQjv39Qg4=
