@@ -1,3 +1,7 @@
 language: objective-c
 xcode_project: fasttimer.xcodeproj
 xcode_scheme: fasttimer
+
+script:
+  - xcrun simctl list
+  - xcodebuild -workspace fasttimer.xcworkspace -scheme fasttimer -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.1' -destination 'platform=iOS Simulator,name=iPad Air,OS=8.1' test
