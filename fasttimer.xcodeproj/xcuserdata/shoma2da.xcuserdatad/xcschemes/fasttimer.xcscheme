@@ -12,6 +12,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3479EEDE1AAD516300782B7D"
+               BuildableName = "fasttimerTests.xctest"
+               BlueprintName = "fasttimerTests"
+               ReferencedContainer = "container:fasttimer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
