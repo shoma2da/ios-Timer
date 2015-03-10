@@ -3,5 +3,7 @@ xcode_project: fasttimer.xcodeproj
 xcode_scheme: fasttimer
 
 script:
+  - export OUTPUT_DIR=./output
   - xcrun simctl list
-  - xcodebuild -workspace fasttimer.xcworkspace -scheme fasttimer -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.1' -destination 'platform=iOS Simulator,name=iPad Air,OS=8.1' test
+  - xcodebuild -workspace fasttimer.xcworkspace -scheme fasttimer -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.1' -destination 'platform=iOS Simulator,name=iPad Air,OS=8.1' test install DSTROOT=${OUTPUT_DIR}
+  - find . -name *app
